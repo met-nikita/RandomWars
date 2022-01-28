@@ -4,6 +4,7 @@ namespace RandomWars.Data
 {
     public abstract class Character
     {
+        public int CharacterId { get; set; }
         public string? Name { get; set; }
         public Bitmap? Icon {get; set; }
         public CharacterStatus CharacterStatus { get; set; }

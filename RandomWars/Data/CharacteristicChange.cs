@@ -2,6 +2,7 @@
 {
     public class CharacteristicChange : IChange
     {
+        public int CharacteristicChangeId { get; set; }
         public Characteristic Characteristic { get; set; }
         public int Value { get; set; }
         public void Change(Character character)
