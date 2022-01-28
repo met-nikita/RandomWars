@@ -1,11 +1,11 @@
 ﻿namespace RandomWars.Data
 {
-    public class CharacteristicChange : IChange
+    public class ChangeCharacteristic : BaseChange
     {
-        public int CharacteristicChangeId { get; set; }
+        //public int ChangeCharacteristicId { get; set; }
         public Characteristic Characteristic { get; set; }
         public int Value { get; set; }
-        public void Change(Character character)
+        public override void Change(Character character)
         {
             switch (Characteristic)
             {

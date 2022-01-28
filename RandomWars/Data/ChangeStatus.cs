@@ -1,11 +1,11 @@
 ﻿namespace RandomWars.Data
 {
-    public class StatusChange : IChange
+    public class ChangeStatus : BaseChange
     {
-        public int StatusChangeId { get; set; }
+        //public int ChangeStatusId { get; set; }
         public CharacterStatus CharacterStatus { get; set; }
         public int Value { get; set; }
-        public void Change(Character character)
+        public override void Change(Character character)
         {
             if(Value < (int)CharacterStatus.STATUS_MAX)
                 character.CharacterStatus = (CharacterStatus)Value;

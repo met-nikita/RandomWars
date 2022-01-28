@@ -2,6 +2,6 @@
 {
     public class EventAttack : Event
     {
-        public List<IChange>? Changes { get; set; }
+        public List<BaseChange>? Changes { get; set; }
     }
 }

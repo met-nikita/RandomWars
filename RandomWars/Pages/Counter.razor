@@ -1,4 +1,5 @@
 ﻿@page "/counter"
+@using RandomWars.Data
 
 <PageTitle>Counter</PageTitle>
 
@@ -7,6 +8,7 @@
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button @onclick="CreateChar">Add char</button>
 
 @code {
     private int currentCount = 0;
@@ -14,5 +16,15 @@
     private void IncrementCount()
     {
         currentCount++;
+    }
+    private void CreateChar()
+    {
+        using (GameContext db = new GameContext())
+        {
+            CharacterStandard characterStandard = new CharacterStandard() { CharacterStatus = CharacterStatus.STATUS_ALIVE, Name = "NumberOne", Health = 100 };
+            db.Characters.Add(characterStandard);
+            db.SaveChanges();
+
+        }
     }
 }
