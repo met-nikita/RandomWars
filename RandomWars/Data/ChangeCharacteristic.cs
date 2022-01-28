@@ -1,6 +1,6 @@
 ﻿namespace RandomWars.Data
 {
-    public class CharacteristicChange : IChange
+    public class ChangeCharacteristic : IChange
     {
         public Characteristic Characteristic { get; set; }
         public int Value { get; set; }
