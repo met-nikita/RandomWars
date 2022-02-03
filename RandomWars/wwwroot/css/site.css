@@ -62,3 +62,66 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+
+
+
+$("td")
+.attr("tabindex", "1")
+.on("touchstart", function() {
+      $(this).focus();
+    });
+
+table.avatars td:focus::after {
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
+table.avatars td:focus::after {
+    background-color: lightblue;
+}
+
+table.avatars td:focus::before {
+    background-color: lightblue;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: -5000px;
+    position: absolute;
+    width: 10000px;
+    z-index: -1;
+}
+
+table.avatars {
+    border-collapse: collapse;
+    border-spacing: 0;
+    height: auto;
+    position: absolute;
+    right: 10%;
+    }
+
+    table.avatars, table.avatars td, table.avatars th {
+        border: 1px solid #595959;
+    }
+        
+        table.avatars td {
+            width: 100px;
+            height: 100px;
+            background: url(https://w7.pngwing.com/pngs/639/449/png-transparent-computer-icons-website-icon-text-globe-symmetry-thumbnail.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        table.avatars th {
+            background: #347c99;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        table.avatars td:hover {
+            border: 3px solid orange;
+        }
+        

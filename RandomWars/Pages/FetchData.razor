@@ -2,47 +2,89 @@
 
 <PageTitle>Weather forecast</PageTitle>
 
+
+
 @using RandomWars.Data
 @inject WeatherForecastService ForecastService
 
-<h1>Weather forecast</h1>
+<h1>Создайте персонажа № @character</h1>
+<img src="https://w7.pngwing.com/pngs/639/449/png-transparent-computer-icons-website-icon-text-globe-symmetry-thumbnail.png" style="position: absolute;  top:30%; left:30%; border: 1px solid #595959">
 
-<p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
+<form name="test" method="post" action="input1.php" style="position: absolute; bottom: 25%; left:26%">
+  <p><b>Введите имя персонажа:<input type="text" size="40"></b><br></p>
+  <p><input class="btn btn-primary" style="position: absolute; left:35%" type="submit" value="Следующий персонаж"@onclick="countingcharacter" ></p>
+ </form>
+         @code {
+            private int character = 1;
+            private void countingcharacter()
             {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
+                character++;
             }
-        </tbody>
-    </table>
-}
+        }
 
-@code {
-    private WeatherForecast[]? forecasts;
+<table class="avatars">
+		<thead>
+			<tr>
+				<th colspan="4" style="background: #ffffff;  font-weight:normal;  color:#000000; text-align:center; height: 35px;"> Выберите аватарку для персонажа></th>
+			</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
-}
+
+
+
+
+
+
+
