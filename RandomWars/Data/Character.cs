@@ -4,8 +4,10 @@ namespace RandomWars.Data
 {
     public abstract class Character
     {
+        public int CharacterId { get; set; }
         public string? Name { get; set; }
-        public Bitmap? Icon {get; set; }
+        //public Bitmap? Icon {get; set; }
+        public byte[]? Icon { get; set; }
         public CharacterStatus CharacterStatus { get; set; }
         public int KillCount { get; set; }
         public int Strength { get; set; }
