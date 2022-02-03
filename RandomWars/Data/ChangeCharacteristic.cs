@@ -5,18 +5,18 @@
         //public int ChangeCharacteristicId { get; set; }
         public Characteristic Characteristic { get; set; }
         public int Value { get; set; }
-        public override void Change(Character character)
+        public override void Change(Character character, double multiplier)
         {
             switch (Characteristic)
             {
                 case Characteristic.CHAR_STRENGTH:
-                    character.Strength += Value;
+                    character.Strength += (int)(Value * multiplier);
                     break;
                 case Characteristic.CHAR_SMARTS:
-                    character.Smarts += Value;
+                    character.Smarts += (int)(Value * multiplier);
                     break;
                 case Characteristic.CHAR_HEALTH:
-                    character.Health += Value;
+                    character.Health += (int)(Value * multiplier);
                     break;
                 default:
                     break;

@@ -14,6 +14,8 @@ namespace RandomWars.Data
         public DbSet<EventReact> EventReactes { get; set; }
         public DbSet<BaseChange> BaseChanges { get; set; }
         public DbSet<ChangeStatus> StatusChanges { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<GameInfo> GameInfo { get; set; }
 
         public string DbPath { get; }
         public GameContext()

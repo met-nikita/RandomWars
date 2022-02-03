@@ -2,7 +2,6 @@
 
 namespace RandomWars.Data
 {
-    [Table("CharacterStandart")]
     public class CharacterStandard : Character
     {
     }

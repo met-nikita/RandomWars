@@ -13,6 +13,6 @@ namespace RandomWars.Data
         public int Strength { get; set; }
         public int Smarts { get; set; }
         public int Health { get; set; }
-
+        public GameInfo GameInfo { get; set; }
     }
 }
